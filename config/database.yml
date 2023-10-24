@@ -31,5 +31,5 @@ encoding: unicode
 pool: 5
 database: test_8k9c
 username: test_8k9c_user
-password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
-url: <%= ENV['DATABASE_URL'] %>
+#: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
+#url: <%= ENV['DATABASE_URL'] %>
