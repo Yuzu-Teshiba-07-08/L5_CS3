@@ -24,6 +24,18 @@ production:
   <<: *default
   database: db/production.sqlite3
 
+
+production:
+<<: *default
+adapter: postgresql
+encoding: unicode
+pool: 5
+database: <%= ENV['USER_DATABASE'] %>
+username: <%= ENV['USER_DATABASE_UID'] %>
+password: <%= ENV['USER_DATABASE_PASS'] %> #USERDETA
+#url: <%= ENV['DATABASE_URL'] %>
+
+
 production:
 <<: *default
 adapter: postgresql
