@@ -20,16 +20,16 @@ test:
   <<: *default
   database: db/test.sqlite3
 
-# production:
-#   <<: *default
-#   database: db/production.sqlite3
+production:
+  <<: *default
+  database: db/production.sqlite3
 
 production:
 <<: *default
 adapter: postgresql
 encoding: unicode
 pool: 5
-database: db/production.sqlite3 #test_8k9c
-username: <%= ENV['User_DATABASE_UID'] %> #test_8k9c_user
-password: <%= ENV['User_DATABASE_PASS'] %>
-#Surl: <%= ENV['DATABASE_URL'] %>
+database: test_8k9c
+username: test_8k9c_user
+password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
+url: <%= ENV['DATABASE_URL'] %>
